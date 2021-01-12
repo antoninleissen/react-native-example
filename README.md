@@ -12,7 +12,9 @@ Ensuite, Veuillez push sur votre branche.
 
 Une fois le travail réalisé, prenez le temps de faire une pull request de votre branche. 
 
-UNE FOIS CET EXERCICE REALISE VEUILLEZ REPONDRE A CE QUESTIONNAIRE : https://forms.gle/mmesDRmqocaxthT59
+UNE FOIS CET EXERCICE REALISE VEUILLEZ REPONDRE A CE QUESTIONNAIRE : 
+
+https://docs.google.com/forms/d/e/1FAIpQLSf6dSHoEcLtsvSFzEEpkMPI_Ysh1DRqtxutbZcHHNECIlIdZA/viewform
 
 ## Help
 
