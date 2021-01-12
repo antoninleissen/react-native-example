@@ -12,6 +12,8 @@ Ensuite, Veuillez push sur votre branche.
 
 Une fois le travail réalisé, prenez le temps de faire une pull request de votre branche. 
 
+UNE FOIS CET EXERCICE REALISE VEUILLEZ REPONDRE A CE QUESTIONNAIRE : https://forms.gle/mmesDRmqocaxthT59
+
 ## Help
 
 https://reactnative.dev/docs
