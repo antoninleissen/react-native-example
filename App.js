@@ -8,6 +8,8 @@
 
 import React from 'react';
 import {
+  Button,
+  Image,
   SafeAreaView,
   StyleSheet,
   ScrollView,
@@ -32,39 +34,24 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
+          <View style={styles.logo}>
+            <Image source={require('./resources/sezaam.png')} />
+          </View>
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
+              <Text style={styles.sectionTitle}>{'Bienvenue sur l\' application de candidature Sezaam !'}</Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text style={styles.sectionTitle}>Demande</Text>
               <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
+                {'Lorsqu\'on clique sur le bouton, nous souhaitons voir apparaître une page/un écran vous décrivant.' +
+                ' Cette page doit être estéthique. Le code doit respecter les standards react / react native. ' +
+                'Si vous ajoutez des contextes reactifs c\'est un plus.'}
               </Text>
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
+            <View style={{marginTop: 15, marginBottom: 15}}>
+              <Button title={'Voir ma page'}/>
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -109,6 +96,10 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  logo: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 
 export default App;
