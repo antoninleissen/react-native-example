@@ -8,7 +8,7 @@ Veuillez clôner le projet. Pour travailler, veuillez créer une branche "VotreN
 
 Veuillez réaliser l'exercice expliqué dans l'application. 
 
-Ensuite, Veuillez push sur votre branche. 
+Ensuite, Veuillez push sur votre branche (Pour cela demander moi que j'ajoute votre github comme collaborateur)
 
 Une fois le travail réalisé, prenez le temps de faire une pull request de votre branche. 
 
