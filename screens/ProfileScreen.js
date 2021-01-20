@@ -39,21 +39,6 @@ const experiences = [
   },
 ]
 
-const hobbies = [
-  {
-    name : 'Football',
-    images: 'https://medias.lequipe.fr/img-photo-jpg/soccer-football-world-cup-final-france-v-croatia-luzhniki-stadium-moscow-russia-july-15/1500000000985392/39:82%2C2500:1721-1000-666-70/76934.jpg',
-  },
-  {
-    name: 'Series',
-    images: 'https://www.ecranlarge.com/uploads/image/001/155/mr-robot-affiche-mr-robot-1155013.jpg',
-  },
-  {
-    name: 'Reading',
-    images: 'https://static.fnac-static.com/multimedia/FR/Images_Produits/FR/fnac.com/ZoomPE/5/2/7/9782253176725/tsp20130327142944/Gatsby-le-magnifique.jpg',
-  },
-]
-
 const ProfileScreen = ({navigation}) => {
     return (
         <SafeAreaView>
@@ -69,8 +54,8 @@ const ProfileScreen = ({navigation}) => {
         </View>
         <View style={styles.userInfoSection}>
             <View style={styles.row}>
-                <Icon name="place" color="#0a0f4c"/>
-                <Text style={{marginLeft: 10}}>Achères, France</Text>
+                <Icon name="place" color="#0a0f4c" onPress={() => {Linking.openURL('https://www.google.com/maps/place/Ach%C3%A8res-Ville/@48.9701977,2.0775146,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68a4479550027:0xe741029a32dbb129!8m2!3d48.9701977!4d2.0775146')}}/>
+                <Text style={{marginLeft: 10}} onPress={() => {Linking.openURL('https://www.google.com/maps/place/Ach%C3%A8res-Ville/@48.9701977,2.0775146,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68a4479550027:0xe741029a32dbb129!8m2!3d48.9701977!4d2.0775146')}}>Achères, France</Text>
             </View>
             <View style={styles.row}>
                 <Icon name="phone" color="#0a0f4c"/>
