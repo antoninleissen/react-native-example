@@ -1,3 +1,8 @@
+
+import React from 'react';
+import { View, Image, Text, Button, SafeAreaView, StyleSheet, Linking, ScrollView } from 'react-native';
+import { Icon, SocialIcon, Card} from 'react-native-elements'
+
 const experiences = [
   {
      name: 'Imagine-app',
@@ -15,27 +20,39 @@ const experiences = [
       images: 'https://files.sbcdnsb.com/images/zjxca7nv65mo/businesses/1595336894/d5a8aae14e951b0ed0ff20151218-1063531-1hd7ik2.png'
    },
  ]
-const school = [
+ 
+ const school = [
   {
       name: 'Epitech',
-      description: '',
-      images: '', 
+      description: "Le futur de l'informatique. Le meilleur de l'innovation.",
+      images: 'https://media-exp1.licdn.com/dms/image/C560BAQEogO0_6QTmdg/company-logo_200_200/0/1594123399589?e=1619049600&v=beta&t=yG3ikHGqCliH4Hcu-1Bnnhe6FZtqut6yEUuBvpYlP-c', 
   },
   {
       name: 'Lycée Jules Ferry',
-      description: '',
-      images: '', 
+      description: 'BTS services informatiques aux organisations',
+      images: 'https://lh3.googleusercontent.com/proxy/9YRgDOaO0Us09HWgcU9p0QGoGzfUqegX6X5fW_AvagWxsiFs9IfRvwqfFKf6o4L2lk3oVpXKPFNssY7bAkXQyDLIJd-wjetp5ZbMkUOg6aRyfqXt6D2mJI8qvF0SNDoqygXP4duoznn3dD6WtQTrpb4FA0qgSn33elsftA', 
   },
   {
       name: 'Lycée Jules Ferry',
-      description: '',
-      images: '', 
+      description: "BAC Systèmes d'information de gestion",
+      images: 'https://lh3.googleusercontent.com/proxy/9YRgDOaO0Us09HWgcU9p0QGoGzfUqegX6X5fW_AvagWxsiFs9IfRvwqfFKf6o4L2lk3oVpXKPFNssY7bAkXQyDLIJd-wjetp5ZbMkUOg6aRyfqXt6D2mJI8qvF0SNDoqygXP4duoznn3dD6WtQTrpb4FA0qgSn33elsftA', 
   },
 ]
-import React from 'react';
-import { View, Image, Text, Button, SafeAreaView, StyleSheet, Linking, ScrollView } from 'react-native';
-import { Icon, SocialIcon, Card, Divider} from 'react-native-elements'
 
+const hobbies = [
+  {
+    name : 'Football',
+    images: 'https://medias.lequipe.fr/img-photo-jpg/soccer-football-world-cup-final-france-v-croatia-luzhniki-stadium-moscow-russia-july-15/1500000000985392/39:82%2C2500:1721-1000-666-70/76934.jpg',
+  },
+  {
+    name: 'Series',
+    images: 'https://www.ecranlarge.com/uploads/image/001/155/mr-robot-affiche-mr-robot-1155013.jpg',
+  },
+  {
+    name: 'Reading',
+    images: 'https://static.fnac-static.com/multimedia/FR/Images_Produits/FR/fnac.com/ZoomPE/5/2/7/9782253176725/tsp20130327142944/Gatsby-le-magnifique.jpg',
+  },
+]
 
 const ProfileScreen = ({navigation}) => {
     return (
@@ -68,7 +85,26 @@ const ProfileScreen = ({navigation}) => {
                 <SocialIcon type="linkedin" onPress= {() => {Linking.openURL('https://www.linkedin.com/in/bitakwire/')}} />
             </View>
        </View>
-       <Card>
+      <View> 
+      <Card containerStyle={{borderRadius: 25}}>
+        <Card.Title>HOBBIES</Card.Title>
+        <Card.Divider />
+        <View style={styles.rowIcon}>
+        <Icon   reverse
+  name='ios-football'
+  type='ionicon'
+  color='black'/>
+                <Icon   reverse
+  name='ios-american-football'
+  type='ionicon'
+  color='black'/>
+    <Icon   reverse
+  name='ios-film'
+  type='ionicon'
+  color='black'/>
+            </View>
+      </Card>
+      <Card containerStyle={{borderRadius: 25}}>
         <Card.Title>EXPERIENCES</Card.Title>
         <Card.Divider/>
         {
@@ -78,10 +114,9 @@ const ProfileScreen = ({navigation}) => {
                 <Image
                   style={styles.image}
                   resizeMode="cover"
-                  
                   source={{ uri: u.images }}
                 />
-                <Text style={styles.name2}>{u.name}</Text>
+                <Text style={styles.nameCard}>{u.name}</Text>
                 <Text style={styles.description}>{u.description}</Text>
                 <Text></Text>
               </View>
@@ -90,8 +125,8 @@ const ProfileScreen = ({navigation}) => {
           })
         }
       </Card>
-      <Card>
-        <Card.Title>FORMATION</Card.Title>
+      <Card containerStyle={{borderRadius: 25}}>
+        <Card.Title>FORMATIONS</Card.Title>
         <Card.Divider/>
         {
           school.map((u, i) => {
@@ -103,15 +138,15 @@ const ProfileScreen = ({navigation}) => {
                   
                   source={{ uri: u.images }}
                 />
-                <Text style={styles.name2}>{u.name}</Text>
+                <Text style={styles.nameCard}>{u.name}</Text>
                 <Text style={styles.description}>{u.description}</Text>
                 <Text></Text>
               </View>
-              
             );
           })
         }
       </Card>
+      </View>
       </ScrollView>  
         </SafeAreaView>
     );
@@ -120,7 +155,7 @@ export default ProfileScreen;
 
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: "#0a0f4c",
+        backgroundColor: "black",
         height:200,
       },
       avatar: {
@@ -155,7 +190,12 @@ const styles = StyleSheet.create({
           flexDirection: 'row',
           marginBottom: 10,
       },
-      name2: {
+      rowIcon: {
+        flexDirection: 'row',
+        marginBottom: 10,
+        justifyContent: 'center',
+    },
+      nameCard: {
         fontSize:22,
         color:"black",
         fontWeight:'600',
@@ -167,7 +207,7 @@ const styles = StyleSheet.create({
         fontSize:14,
         color:"grey",
         fontWeight:'600',
-        marginTop: 25,
+        marginTop: 29,
         marginLeft: 90,
         position: "absolute",
       },
@@ -177,5 +217,13 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         borderWidth: 5,
         alignSelf:'baseline',
+      },
+      imageHob: {
+        width: 50, 
+        height: 50,
+        borderRadius: 6,
+        borderWidth: 5,
+        alignSelf:'baseline',
+        marginTop: 1,
       },
 })
