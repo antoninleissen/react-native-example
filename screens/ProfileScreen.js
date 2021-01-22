@@ -176,9 +176,10 @@ const ProfileScreen = ({ navigation }) => {
             <View style={{backgroundColor: "#000000aa", flex: 1}}>
               <View style={{backgroundColor: "#ffffff", margin:50, padding: 40, borderRadius: 10}}>
               <Text style={styles.title}>
-        
+                Bonjour ou Bonsoir ! Je suis très heureux d'avoir fait ce test. :D Alors j'ai 21 ans et étant un passionné d'informatique et appréciant un peu plus particulièrement le développement d'application mobile. Je suis très ambitieux et ainsi je ferai tout pour satisfaire vos attentes et Je suis déterminé à reussir peu importe les efforts. Merci d'avoir pris le temps de consulter ma page ! En vous souhaitant une bonne santé et une très belle annnée 2021 !
       </Text>
-      <Button onPress={() => setShow(false)} title="Fermer"></Button>
+      
+      <Button onPress={() => setShow(false)} title="Á Bientot ! :)"></Button>
               </View>
             </View>
           </Modal>
