@@ -1,7 +1,8 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Image, Text, Pressable, SafeAreaView, StyleSheet, Linking, ScrollView, Button, Modal } from 'react-native';
 import { Icon, SocialIcon, Card } from 'react-native-elements'
+
 
 const experiences = [
   {
@@ -39,7 +40,13 @@ const school = [
   },
 ]
 
+
+
+
 const ProfileScreen = ({ navigation }) => {
+  
+  const [show, setShow] = useState(false)
+
   return (
     <SafeAreaView style={{ backgroundColor: "#191970", }}>
       <ScrollView>
@@ -162,9 +169,23 @@ const ProfileScreen = ({ navigation }) => {
             }
           </Card>
           <Text></Text>
-          <Button title=" Veuillez Cliquez ici pour en savoir plus"></Button>
-        </View>
-
+          <Modal 
+          transparent={true}
+          visible={show}
+          >
+            <View style={{backgroundColor: "#000000aa", flex: 1}}>
+              <View style={{backgroundColor: "#ffffff", margin:50, padding: 40, borderRadius: 10}}>
+              <Text style={styles.title}>
+        
+      </Text>
+      <Button onPress={() => setShow(false)} title="Fermer"></Button>
+              </View>
+            </View>
+          </Modal>
+          <View>
+          <Button onPress={() => setShow(true)} title=" Veuillez Cliquez ici pour en savoir plus"></Button>
+          </View>
+                  </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -247,5 +268,9 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 6,
     flexDirection: 'row'
+  },
+  title: {
+    textAlign: 'center',
+    marginVertical: 8,
   },
 })
